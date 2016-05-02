@@ -1,0 +1,8 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","ioczebra")
+epicsEnvSet("TOP","/epics/iocs/zebra")
+epicsEnvSet("SUPPORT","/usr/lib/epics")
+epicsEnvSet("ASYN","/usr/lib/epics")
+epicsEnvSet("BUSY","/usr/lib/epics")
+epicsEnvSet("MOTOR","/usr/lib/epics")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

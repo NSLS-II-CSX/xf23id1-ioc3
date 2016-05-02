@@ -1,0 +1,42 @@
+## Database template for Temperature tags in IXS EPS PLC
+
+record(ai, "XF:23ID1-ES{Dif-Ax:Gam}T-I")
+{
+    field(DESC, "Temperature indicator, degC")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "EtherIP")
+    field(INP,  "@XF_23ID_EPS_ES1_PLC_F1 T_I[0] S 1")
+    field(PREC, "1")
+    field(ASLO, "0.1")
+    field(EGU,  "C")
+}
+
+
+## Database template for Temperature tags in IXS EPS PLC
+
+record(ai, "XF:23ID1-OP{Sh:Fast}T-I")
+{
+    field(DESC, "Temperature indicator, degC")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "EtherIP")
+    field(INP,  "@XF_23ID_EPS_ES1_PLC_F1 T_I[1] S 1")
+    field(PREC, "1")
+    field(ASLO, "0.1")
+    field(EGU,  "C")
+}
+
+
+## Database template for Temperature tags in IXS EPS PLC
+
+record(ai, "XF:23ID1-ES{FCCD-N2}T-I")
+{
+    field(DESC, "Temperature indicator, degC")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "EtherIP")
+    field(INP,  "@XF_23ID_EPS_ES1_PLC_F1 T_I[2] S 1")
+    field(PREC, "1")
+    field(ASLO, "0.1")
+    field(EGU,  "C")
+}
+
+

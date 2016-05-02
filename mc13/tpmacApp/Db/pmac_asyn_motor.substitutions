@@ -1,0 +1,13 @@
+file "db/pmac_asyn_motor.db"
+{
+
+pattern
+{SYS,              DEV,                           MOTOR,  SPORT,  ADDR,  DESC,        DTYP        PREC,  EGU }
+{"XF:23ID1-ES",    "{Dif:Lens-Ax:TopX}",      "motor", "P0",    1,    "Top X",     "asynMotor",  6,      "mm" }
+{"XF:23ID1-ES",    "{Dif:Lens-Ax:TopY}",      "motor", "P0",    2,    "Top Y",     "asynMotor",  6,      "mm" }
+{"XF:23ID1-ES",    "{Dif:Lens-Ax:TopZ}",      "motor", "P0",    3,    "Top Z",     "asynMotor",  6,      "mm" }
+{"XF:23ID1-ES",    "{Dif:Lens-Ax:BotX}",      "motor", "P0",    4,    "Bottom X",  "asynMotor",  6,      "mm" }
+{"XF:23ID1-ES",    "{Dif:Lens-Ax:BotY}",      "motor", "P0",    5,    "Bottom Y",  "asynMotor",  6,      "mm" }
+{"XF:23ID1-ES",    "{Dif:Lens-Ax:BotZ}",      "motor", "P0",    6,    "Bottom Z",  "asynMotor",  6,      "mm" }
+
+}

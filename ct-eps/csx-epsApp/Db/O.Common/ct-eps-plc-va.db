@@ -1,0 +1,1450 @@
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif-IP:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 IP_Sts_1[0] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif IP 2 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif-IP:2}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif IP 2 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 IP_Sts_1[1] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif-TMP:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 TMP_Sts_1[2] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif-CCG:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 CCG_Sts_1[0] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif:LoadLck IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif:LoadLck-CCG:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif:LoadLck IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 CCG_Sts_1[1] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif-TCG:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 TCG_Sts_1[0] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif:LoadLck IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif:LoadLck-TCG:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif:LoadLck IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 TCG_Sts_1[1] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# Dif:Backing IP 1 Set point relay signal
+record(bi, "XF:23ID1-VA{Dif:Backing-TCG:1}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "Dif:Backing IP 1 PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 TCG_Sts_1[1] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-GV:2 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-GV:2 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-GV:2 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Pos-Sts")
+{
+        field(DESC, "Dif-GV:2 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Err-Sts")
+{
+        field(DESC, "Dif-GV:2 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-GV:2 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-GV:2 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:2 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:2 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-GV:2}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-GV:2 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-GV:2}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-GV:2 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_02_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-GV:2}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-GV:2 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-GV:2Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-GV:2Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-GV:2DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-GV:2}DB:Pos-Sts")
+{
+        field(DESC, "Dif-GV:2 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-GV:2DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-GV:3 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-GV:3 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-GV:3 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Pos-Sts")
+{
+        field(DESC, "Dif-GV:3 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Err-Sts")
+{
+        field(DESC, "Dif-GV:3 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-GV:3 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-GV:3 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:3 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:3 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-GV:3}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-GV:3 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-GV:3}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-GV:3 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_03_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-GV:3}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-GV:3 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-GV:3Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-GV:3Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-GV:3DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-GV:3}DB:Pos-Sts")
+{
+        field(DESC, "Dif-GV:3 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-GV:3DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-GV:4 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-GV:4 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-GV:4 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Pos-Sts")
+{
+        field(DESC, "Dif-GV:4 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Err-Sts")
+{
+        field(DESC, "Dif-GV:4 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-GV:4 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-GV:4 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:4 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:4 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-GV:4}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-GV:4 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-GV:4}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-GV:4 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_04_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-GV:4}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-GV:4 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-GV:4Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-GV:4Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-GV:4DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-GV:4}DB:Pos-Sts")
+{
+        field(DESC, "Dif-GV:4 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-GV:4DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-GV:5 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-GV:5 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-GV:5 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Pos-Sts")
+{
+        field(DESC, "Dif-GV:5 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Err-Sts")
+{
+        field(DESC, "Dif-GV:5 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-GV:5 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-GV:5 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:5 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:5 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-GV:5}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-GV:5 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-GV:5}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-GV:5 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_05_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-GV:5}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-GV:5 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-GV:5Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-GV:5Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-GV:5DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-GV:5}DB:Pos-Sts")
+{
+        field(DESC, "Dif-GV:5 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-GV:5DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-GV:6 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-GV:6 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-GV:6 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Pos-Sts")
+{
+        field(DESC, "Dif-GV:6 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Err-Sts")
+{
+        field(DESC, "Dif-GV:6 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-GV:6 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-GV:6 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:6 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:6 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-GV:6}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-GV:6 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-GV:6}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-GV:6 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_06_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-GV:6}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-GV:6 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-GV:6Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-GV:6Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-GV:6DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-GV:6}DB:Pos-Sts")
+{
+        field(DESC, "Dif-GV:6 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-GV:6DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Pos-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Err-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-Vlv:7 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-Vlv:7 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-Vlv:7}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-Vlv:7 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-Vlv:7}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-Vlv:7 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_07_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-Vlv:7}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-Vlv:7 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-Vlv:7Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-Vlv:7Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-Vlv:7DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-Vlv:7}DB:Pos-Sts")
+{
+        field(DESC, "Dif-Vlv:7 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-Vlv:7DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sw:OpnLim-Sts")
+{
+        field(DESC, "Dif-GV:8 Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sw:ClsLim-Sts")
+{
+        field(DESC, "Dif-GV:8 Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sts:Coil-Sts")
+{
+        field(DESC, "Dif-GV:8 Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Pos-Sts")
+{
+        field(DESC, "Dif-GV:8 Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Err-Sts")
+{
+        field(DESC, "Dif-GV:8 Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sts:FailOpn-Sts")
+{
+        field(DESC, "Dif-GV:8 Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sts:FailCls-Sts")
+{
+        field(DESC, "Dif-GV:8 Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:8 DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Sts:US_Intlk-Sts")
+{
+        field(DESC, "Dif-GV:8 US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "XF:23ID1-VA{Dif-GV:8}Cmd:Opn-Cmd")
+{
+        field(DESC, "Dif-GV:8 Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "XF:23ID1-VA{Dif-GV:8}Cmd:Cls-Cmd")
+{
+        field(DESC, "Dif-GV:8 Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_08_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-VA{Dif-GV:8}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-GV:8 Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-VADif-GV:8Err-Sts NPP MS")
+        field(INPB, "XF:23ID1-VADif-GV:8Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-VADif-GV:8DB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-VA{Dif-GV:8}DB:Pos-Sts")
+{
+        field(DESC, "Dif-GV:8 Sts")
+        field(SCAN, "Passive")
+        field(INP,  "XF:23ID1-VADif-GV:8DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+record(bi, "XF:23ID1-ES{Dif-FS}Sw:InLim-Sts")
+{
+        field(DESC, "Dif-FS Inserted Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Sw:OutLim-Sts")
+{
+        field(DESC, "Dif-FS Retracted  Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Sts:Act-Sts")
+{
+        field(DESC, "Dif-FS Actuator Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Pos-Sts")
+{
+        field(DESC, "Dif-FS Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.Sts S 0.5")
+        field(ZNAM, "Not Inserted")
+        field(ONAM, "Inserted")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Err-Sts")
+{
+        field(DESC, "Dif-FS Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Sts:FailIn-Sts")
+{
+        field(DESC, "Dif-FS Fail to Insert")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Sts:FailOut-Sts")
+{
+        field(DESC, "Dif-FS Fail to Retract")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-ES{Dif-FS}Sts:Intlk-Sts")
+{
+        field(DESC, "Dif-FS is interlocked by mating actuator")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bo, "XF:23ID1-ES{Dif-FS}Cmd:In-Cmd")
+{
+        field(DESC, "Dif-FS Insert Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Insert")
+}
+
+record(bo, "XF:23ID1-ES{Dif-FS}Cmd:Out-Cmd")
+{
+        field(DESC, "Dif-FS Retract Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 Act_01_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Retract")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-ES{Dif-FS}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-FS Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-ESDif-FSErr-Sts NPP MS")
+        field(INPB, "XF:23ID1-ESDif-FSPos-Sts NPP MS")
+
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-ESDif-FSDB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-ES{Dif-FS}DB:Pos-Sts")
+{
+        field(DESC, "Dif-FS Sts")
+        field(INP,  "XF:23ID1-ESDif-FSDB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Sw:InLim-Sts")
+{
+        field(DESC, "Dif-Abs Inserted Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Sw:OutLim-Sts")
+{
+        field(DESC, "Dif-Abs Retracted  Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Sts:Act-Sts")
+{
+        field(DESC, "Dif-Abs Actuator Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Pos-Sts")
+{
+        field(DESC, "Dif-Abs Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.Sts S 0.5")
+        field(ZNAM, "Not Inserted")
+        field(ONAM, "Inserted")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Err-Sts")
+{
+        field(DESC, "Dif-Abs Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Sts:FailIn-Sts")
+{
+        field(DESC, "Dif-Abs Fail to Insert")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Sts:FailOut-Sts")
+{
+        field(DESC, "Dif-Abs Fail to Retract")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "XF:23ID1-ES{Dif-Abs}Sts:Intlk-Sts")
+{
+        field(DESC, "Dif-Abs is interlocked by mating actuator")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bo, "XF:23ID1-ES{Dif-Abs}Cmd:In-Cmd")
+{
+        field(DESC, "Dif-Abs Insert Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Insert")
+}
+
+record(bo, "XF:23ID1-ES{Dif-Abs}Cmd:Out-Cmd")
+{
+        field(DESC, "Dif-Abs Retract Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 Act_02_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Retract")
+}
+
+# GV status calculation
+record(calc, "XF:23ID1-ES{Dif-Abs}DB:Pos-Calc_")
+{
+        field(DESC, "Dif-Abs Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-ESDif-AbsErr-Sts NPP MS")
+        field(INPB, "XF:23ID1-ESDif-AbsPos-Sts NPP MS")
+
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "XF:23ID1-ESDif-AbsDB:Pos-Sts")
+}
+
+record(mbbi, "XF:23ID1-ES{Dif-Abs}DB:Pos-Sts")
+{
+        field(DESC, "Dif-Abs Sts")
+        field(INP,  "XF:23ID1-ESDif-AbsDB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+

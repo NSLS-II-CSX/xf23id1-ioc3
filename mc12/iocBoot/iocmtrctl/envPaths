@@ -1,0 +1,8 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","iocmtrctl")
+epicsEnvSet("TOP","/epics/iocs/mc12")
+epicsEnvSet("ASYN","/usr/lib/epics")
+epicsEnvSet("MOTOR","/usr/lib/epics")
+epicsEnvSet("TPMAC","/usr/lib/epics")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")
+epicsEnvSet("PMACUTIL","/usr/share/epics-pmacutil-dev")

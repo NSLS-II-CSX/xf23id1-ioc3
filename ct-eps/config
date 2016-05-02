@@ -1,0 +1,4 @@
+NAME=ct-eps
+PORT=4002
+HOST=xf23id1-ioc3
+USER=softioc

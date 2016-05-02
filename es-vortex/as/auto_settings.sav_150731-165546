@@ -1,0 +1,237 @@
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 150731-165519
+XF:23ID1-ES{Vortex}PollTime 0.001
+XF:23ID1-ES{Vortex}NumSCAs 16
+XF:23ID1-ES{Vortex}SaveSystemFile 0
+XF:23ID1-ES{Vortex}dxp1:PeakingTime 8
+XF:23ID1-ES{Vortex}dxp1:TriggerThreshold 0
+XF:23ID1-ES{Vortex}dxp1:BaselineThreshold 0.2
+XF:23ID1-ES{Vortex}dxp1:BaselineCutPercent 5
+XF:23ID1-ES{Vortex}dxp1:BaselineCutEnable 1
+XF:23ID1-ES{Vortex}dxp1:BaselineFilterLength 4
+XF:23ID1-ES{Vortex}dxp1:EnergyThreshold 0
+XF:23ID1-ES{Vortex}dxp1:TriggerOutput 0
+XF:23ID1-ES{Vortex}dxp1:LiveTimeOutput 0
+XF:23ID1-ES{Vortex}dxp1:ADCPercentRule 5
+XF:23ID1-ES{Vortex}dxp1:MaxEnergy 4.096
+XF:23ID1-ES{Vortex}dxp1:PreampGain 2
+XF:23ID1-ES{Vortex}dxp1:DetectorPolarity 1
+XF:23ID1-ES{Vortex}dxp1:ResetDelay 50
+XF:23ID1-ES{Vortex}dxp1:DecayTime 50
+XF:23ID1-ES{Vortex}dxp1:GapTime 0.1
+XF:23ID1-ES{Vortex}dxp1:TriggerPeakingTime 1
+XF:23ID1-ES{Vortex}dxp1:TriggerGapTime 0
+XF:23ID1-ES{Vortex}dxp1:MaxWidth 0.2
+XF:23ID1-ES{Vortex}dxp1:PresetMode 1
+XF:23ID1-ES{Vortex}dxp1:PresetEvents 0
+XF:23ID1-ES{Vortex}dxp1:PresetTriggers 0
+XF:23ID1-ES{Vortex}dxp1:TraceMode 0
+XF:23ID1-ES{Vortex}dxp1:TraceTime 100
+XF:23ID1-ES{Vortex}mca1.CALO 0
+XF:23ID1-ES{Vortex}mca1.CALS 1
+XF:23ID1-ES{Vortex}mca1.CALQ 0
+XF:23ID1-ES{Vortex}mca1.EGU 
+XF:23ID1-ES{Vortex}mca1.TTH 10
+XF:23ID1-ES{Vortex}mca1.PRTM 10
+XF:23ID1-ES{Vortex}mca1.PLTM 0
+XF:23ID1-ES{Vortex}mca1.PCT 0
+XF:23ID1-ES{Vortex}mca1.PCTL 0
+XF:23ID1-ES{Vortex}mca1.PCTH 0
+XF:23ID1-ES{Vortex}mca1.DWEL 1
+XF:23ID1-ES{Vortex}mca1.PSCL 1
+XF:23ID1-ES{Vortex}mca1.CHAS 0
+XF:23ID1-ES{Vortex}mca1.MODE 0
+XF:23ID1-ES{Vortex}mca1.R0LO -1
+XF:23ID1-ES{Vortex}mca1.R0HI -1
+XF:23ID1-ES{Vortex}mca1.R0IP 0
+XF:23ID1-ES{Vortex}mca1.R0P 0
+XF:23ID1-ES{Vortex}mca1.R0BG 0
+XF:23ID1-ES{Vortex}mca1.R0NM 
+XF:23ID1-ES{Vortex}mca1.R1LO -1
+XF:23ID1-ES{Vortex}mca1.R1HI -1
+XF:23ID1-ES{Vortex}mca1.R1IP 0
+XF:23ID1-ES{Vortex}mca1.R1P 0
+XF:23ID1-ES{Vortex}mca1.R1BG 0
+XF:23ID1-ES{Vortex}mca1.R1NM 
+XF:23ID1-ES{Vortex}mca1.R2LO -1
+XF:23ID1-ES{Vortex}mca1.R2HI -1
+XF:23ID1-ES{Vortex}mca1.R2IP 0
+XF:23ID1-ES{Vortex}mca1.R2P 0
+XF:23ID1-ES{Vortex}mca1.R2BG 0
+XF:23ID1-ES{Vortex}mca1.R2NM 
+XF:23ID1-ES{Vortex}mca1.R3LO -1
+XF:23ID1-ES{Vortex}mca1.R3HI -1
+XF:23ID1-ES{Vortex}mca1.R3IP 0
+XF:23ID1-ES{Vortex}mca1.R3P 0
+XF:23ID1-ES{Vortex}mca1.R3BG 0
+XF:23ID1-ES{Vortex}mca1.R3NM 
+XF:23ID1-ES{Vortex}mca1.R4LO -1
+XF:23ID1-ES{Vortex}mca1.R4HI -1
+XF:23ID1-ES{Vortex}mca1.R4IP 0
+XF:23ID1-ES{Vortex}mca1.R4P 0
+XF:23ID1-ES{Vortex}mca1.R4BG 0
+XF:23ID1-ES{Vortex}mca1.R4NM 
+XF:23ID1-ES{Vortex}mca1.R5LO -1
+XF:23ID1-ES{Vortex}mca1.R5HI -1
+XF:23ID1-ES{Vortex}mca1.R5IP 0
+XF:23ID1-ES{Vortex}mca1.R5P 0
+XF:23ID1-ES{Vortex}mca1.R5BG 0
+XF:23ID1-ES{Vortex}mca1.R5NM 
+XF:23ID1-ES{Vortex}mca1.R6LO -1
+XF:23ID1-ES{Vortex}mca1.R6HI -1
+XF:23ID1-ES{Vortex}mca1.R6IP 0
+XF:23ID1-ES{Vortex}mca1.R6P 0
+XF:23ID1-ES{Vortex}mca1.R6BG 0
+XF:23ID1-ES{Vortex}mca1.R6NM 
+XF:23ID1-ES{Vortex}mca1.R7LO -1
+XF:23ID1-ES{Vortex}mca1.R7HI -1
+XF:23ID1-ES{Vortex}mca1.R7IP 0
+XF:23ID1-ES{Vortex}mca1.R7P 0
+XF:23ID1-ES{Vortex}mca1.R7BG 0
+XF:23ID1-ES{Vortex}mca1.R7NM 
+XF:23ID1-ES{Vortex}mca1.R8LO -1
+XF:23ID1-ES{Vortex}mca1.R8HI -1
+XF:23ID1-ES{Vortex}mca1.R8IP 0
+XF:23ID1-ES{Vortex}mca1.R8P 0
+XF:23ID1-ES{Vortex}mca1.R8BG 0
+XF:23ID1-ES{Vortex}mca1.R8NM 
+XF:23ID1-ES{Vortex}mca1.R9LO -1
+XF:23ID1-ES{Vortex}mca1.R9HI -1
+XF:23ID1-ES{Vortex}mca1.R9IP 0
+XF:23ID1-ES{Vortex}mca1.R9P 0
+XF:23ID1-ES{Vortex}mca1.R9BG 0
+XF:23ID1-ES{Vortex}mca1.R9NM 
+XF:23ID1-ES{Vortex}mca1.R10LO -1
+XF:23ID1-ES{Vortex}mca1.R10HI -1
+XF:23ID1-ES{Vortex}mca1.R10IP 0
+XF:23ID1-ES{Vortex}mca1.R10P 0
+XF:23ID1-ES{Vortex}mca1.R10BG 0
+XF:23ID1-ES{Vortex}mca1.R10NM 
+XF:23ID1-ES{Vortex}mca1.R11LO -1
+XF:23ID1-ES{Vortex}mca1.R11HI -1
+XF:23ID1-ES{Vortex}mca1.R11IP 0
+XF:23ID1-ES{Vortex}mca1.R11P 0
+XF:23ID1-ES{Vortex}mca1.R11BG 0
+XF:23ID1-ES{Vortex}mca1.R11NM 
+XF:23ID1-ES{Vortex}mca1.R12LO -1
+XF:23ID1-ES{Vortex}mca1.R12HI -1
+XF:23ID1-ES{Vortex}mca1.R12IP 0
+XF:23ID1-ES{Vortex}mca1.R12P 0
+XF:23ID1-ES{Vortex}mca1.R12BG 0
+XF:23ID1-ES{Vortex}mca1.R12NM 
+XF:23ID1-ES{Vortex}mca1.R13LO -1
+XF:23ID1-ES{Vortex}mca1.R13HI -1
+XF:23ID1-ES{Vortex}mca1.R13IP 0
+XF:23ID1-ES{Vortex}mca1.R13P 0
+XF:23ID1-ES{Vortex}mca1.R13BG 0
+XF:23ID1-ES{Vortex}mca1.R13NM 
+XF:23ID1-ES{Vortex}mca1.R14LO -1
+XF:23ID1-ES{Vortex}mca1.R14HI -1
+XF:23ID1-ES{Vortex}mca1.R14IP 0
+XF:23ID1-ES{Vortex}mca1.R14P 0
+XF:23ID1-ES{Vortex}mca1.R14BG 0
+XF:23ID1-ES{Vortex}mca1.R14NM 
+XF:23ID1-ES{Vortex}mca1.R15LO -1
+XF:23ID1-ES{Vortex}mca1.R15HI -1
+XF:23ID1-ES{Vortex}mca1.R15IP 0
+XF:23ID1-ES{Vortex}mca1.R15P 0
+XF:23ID1-ES{Vortex}mca1.R15BG 0
+XF:23ID1-ES{Vortex}mca1.R15NM 
+XF:23ID1-ES{Vortex}mca1.R16LO -1
+XF:23ID1-ES{Vortex}mca1.R16HI -1
+XF:23ID1-ES{Vortex}mca1.R16IP 0
+XF:23ID1-ES{Vortex}mca1.R16P 0
+XF:23ID1-ES{Vortex}mca1.R16BG 0
+XF:23ID1-ES{Vortex}mca1.R16NM 
+XF:23ID1-ES{Vortex}mca1.R17LO -1
+XF:23ID1-ES{Vortex}mca1.R17HI -1
+XF:23ID1-ES{Vortex}mca1.R17IP 0
+XF:23ID1-ES{Vortex}mca1.R17P 0
+XF:23ID1-ES{Vortex}mca1.R17BG 0
+XF:23ID1-ES{Vortex}mca1.R17NM 
+XF:23ID1-ES{Vortex}mca1.R18LO -1
+XF:23ID1-ES{Vortex}mca1.R18HI -1
+XF:23ID1-ES{Vortex}mca1.R18IP 0
+XF:23ID1-ES{Vortex}mca1.R18P 0
+XF:23ID1-ES{Vortex}mca1.R18BG 0
+XF:23ID1-ES{Vortex}mca1.R18NM 
+XF:23ID1-ES{Vortex}mca1.R19LO -1
+XF:23ID1-ES{Vortex}mca1.R19HI -1
+XF:23ID1-ES{Vortex}mca1.R19IP 0
+XF:23ID1-ES{Vortex}mca1.R19P 0
+XF:23ID1-ES{Vortex}mca1.R19BG 0
+XF:23ID1-ES{Vortex}mca1.R19NM 
+XF:23ID1-ES{Vortex}mca1.R20LO -1
+XF:23ID1-ES{Vortex}mca1.R20HI -1
+XF:23ID1-ES{Vortex}mca1.R20IP 0
+XF:23ID1-ES{Vortex}mca1.R20P 0
+XF:23ID1-ES{Vortex}mca1.R20BG 0
+XF:23ID1-ES{Vortex}mca1.R20NM 
+XF:23ID1-ES{Vortex}mca1.R21LO -1
+XF:23ID1-ES{Vortex}mca1.R21HI -1
+XF:23ID1-ES{Vortex}mca1.R21IP 0
+XF:23ID1-ES{Vortex}mca1.R21P 0
+XF:23ID1-ES{Vortex}mca1.R21BG 0
+XF:23ID1-ES{Vortex}mca1.R21NM 
+XF:23ID1-ES{Vortex}mca1.R22LO -1
+XF:23ID1-ES{Vortex}mca1.R22HI -1
+XF:23ID1-ES{Vortex}mca1.R22IP 0
+XF:23ID1-ES{Vortex}mca1.R22P 0
+XF:23ID1-ES{Vortex}mca1.R22BG 0
+XF:23ID1-ES{Vortex}mca1.R22NM 
+XF:23ID1-ES{Vortex}mca1.R23LO -1
+XF:23ID1-ES{Vortex}mca1.R23HI -1
+XF:23ID1-ES{Vortex}mca1.R23IP 0
+XF:23ID1-ES{Vortex}mca1.R23P 0
+XF:23ID1-ES{Vortex}mca1.R23BG 0
+XF:23ID1-ES{Vortex}mca1.R23NM 
+XF:23ID1-ES{Vortex}mca1.R24LO -1
+XF:23ID1-ES{Vortex}mca1.R24HI -1
+XF:23ID1-ES{Vortex}mca1.R24IP 0
+XF:23ID1-ES{Vortex}mca1.R24P 0
+XF:23ID1-ES{Vortex}mca1.R24BG 0
+XF:23ID1-ES{Vortex}mca1.R24NM 
+XF:23ID1-ES{Vortex}mca1.R25LO -1
+XF:23ID1-ES{Vortex}mca1.R25HI -1
+XF:23ID1-ES{Vortex}mca1.R25IP 0
+XF:23ID1-ES{Vortex}mca1.R25P 0
+XF:23ID1-ES{Vortex}mca1.R25BG 0
+XF:23ID1-ES{Vortex}mca1.R25NM 
+XF:23ID1-ES{Vortex}mca1.R26LO -1
+XF:23ID1-ES{Vortex}mca1.R26HI -1
+XF:23ID1-ES{Vortex}mca1.R26IP 0
+XF:23ID1-ES{Vortex}mca1.R26P 0
+XF:23ID1-ES{Vortex}mca1.R26BG 0
+XF:23ID1-ES{Vortex}mca1.R26NM 
+XF:23ID1-ES{Vortex}mca1.R27LO -1
+XF:23ID1-ES{Vortex}mca1.R27HI -1
+XF:23ID1-ES{Vortex}mca1.R27IP 0
+XF:23ID1-ES{Vortex}mca1.R27P 0
+XF:23ID1-ES{Vortex}mca1.R27BG 0
+XF:23ID1-ES{Vortex}mca1.R27NM 
+XF:23ID1-ES{Vortex}mca1.R28LO -1
+XF:23ID1-ES{Vortex}mca1.R28HI -1
+XF:23ID1-ES{Vortex}mca1.R28IP 0
+XF:23ID1-ES{Vortex}mca1.R28P 0
+XF:23ID1-ES{Vortex}mca1.R28BG 0
+XF:23ID1-ES{Vortex}mca1.R28NM 
+XF:23ID1-ES{Vortex}mca1.R29LO -1
+XF:23ID1-ES{Vortex}mca1.R29HI -1
+XF:23ID1-ES{Vortex}mca1.R29IP 0
+XF:23ID1-ES{Vortex}mca1.R29P 0
+XF:23ID1-ES{Vortex}mca1.R29BG 0
+XF:23ID1-ES{Vortex}mca1.R29NM 
+XF:23ID1-ES{Vortex}mca1.R30LO -1
+XF:23ID1-ES{Vortex}mca1.R30HI -1
+XF:23ID1-ES{Vortex}mca1.R30IP 0
+XF:23ID1-ES{Vortex}mca1.R30P 0
+XF:23ID1-ES{Vortex}mca1.R30BG 0
+XF:23ID1-ES{Vortex}mca1.R30NM 
+XF:23ID1-ES{Vortex}mca1.R31LO -1
+XF:23ID1-ES{Vortex}mca1.R31HI -1
+XF:23ID1-ES{Vortex}mca1.R31IP 0
+XF:23ID1-ES{Vortex}mca1.R31P 0
+XF:23ID1-ES{Vortex}mca1.R31BG 0
+XF:23ID1-ES{Vortex}mca1.R31NM 
+XF:23ID1-ES{Vortex}mca1Read.SCAN 9
+XF:23ID1-ES{Vortex}mca1Status.SCAN 9
+<END>

@@ -1,0 +1,5 @@
+file ct-eps-plc-misc.template
+{	
+	pattern {Sys, PLC}
+			{XF:23ID-CT, XF_23ID_EPS_ES1_PLC_F1}
+}

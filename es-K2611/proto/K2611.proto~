@@ -1,0 +1,174 @@
+Terminator = LF;
+
+
+#############instrument
+
+Ident {
+	out "*IDN?";
+	in "%256c";
+}
+
+#use this to clean up abort after control C?
+#Abort {
+#	out "smua.abort()"; #aborts operation on source meter unit channel A. Return to idle state if during sweep.
+#}
+
+
+#SetSourFunc{
+#	out"smua.source.func = smua.OUTPUT_DCVOLTS";
+#	out"smua.source.func = smua.OUTPUT_
+#}
+
+
+#############measure
+GetSourSts{
+	out"print(smua.source.output)"; 
+	in "%{0|1}";
+}
+
+
+SetSourSts{
+        out"smua.source.output=smua.OUTPUT_%s";
+#        @init {GetSourSts;}
+}
+#	out"smua.source.output = smua.OUTPUT_OFF";
+
+
+#SourON{
+#	out"smua.source.output = smua.OUTPUT_ON";
+#}
+#
+#SourOFF{ 
+#        out"smua.source.output = smua.OUTPUT_OFF";
+#}
+
+
+
+SourMeasV{
+	out"print(smua.measure.v(smua.nvbuffer1),smua.measure.i(smua.nvbuffer1),smua.measure.r(smua.nvbuffer1))";
+	#in"%256c"; #this makde it work with tab separation when it was a string
+	in "%f\t%*f\t%*f";  #failing to get single floats to work when ao
+}
+
+SourMeasI{
+	in "%*f\t%f\t%*f";
+}
+
+SourMeasR{
+        in "%*f\t%*f\t%f";
+}
+
+##############voltage
+
+
+GetVsp {
+        out "print(smua.source.levelv)"; in "%s";
+}
+
+
+SetVsp {
+	out "smua.source.levelv=%s";     # +/- 200V K2611B
+	@init {GetVsp;}
+}
+
+
+GetVlim {
+        out "print(smua.source.limitv)";
+	in "%s";
+}
+
+
+SetVlim {
+	out "smua.source.limitv=%s";
+	@init {GetVlim;}
+}
+
+
+########################V and i combos
+GetAutoRangV {
+	out "print(smua.source.autorangev)";
+        in "%{0|1}";
+	#out "print(smua.source.autorangev,smua.source.autorangei)"
+        #in "%{0|1}\t%*{0|1}";
+}
+
+GetAutoRangI {
+        out "print(smua.source.autorangei)";               
+        in "%{0|1}";
+        #in "%*{0|1}\t%{0|1}";
+}
+
+SetAutoRangV{
+	out "smua.source.autorangev = smua.AUTORANGE_ON";
+	out "smua.source.autorangev = smua.AUTORANGE_OFF";
+}
+
+GetVrang {
+	out "print(smua.source.rangev)";
+	in "%f";
+}
+
+SetVrang {
+        out "smua.source.rangev = %f";
+	@init {GetVrang;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###########current
+
+GetIsp {
+        out "print(smua.source.leveli)"; in "%f";
+}
+
+
+SetIsp {
+        out "smua.source.leveli=%f";     # +/- 1.5A K2611B
+        @init {GetIsp;}
+}
+
+GetIlim {
+        out "print(smua.source.limi)"; in "%f";
+}
+
+
+SetIlim {
+        out "smua.source.limiti=%f";
+	@init {GetIlim;}
+}
+ 
+ 
+AutoRangI {        
+        out "smua.source.autorangei = smua.AUTORANGE_ON";
+        out "smua.source.autorangei = smua.AUTORANGE_OFF";
+}
+
+
+ 
+SetIrang {
+        out "smua.source.rangei = %f";
+}
+
+
+ 
+
+
+
+
+
+
+

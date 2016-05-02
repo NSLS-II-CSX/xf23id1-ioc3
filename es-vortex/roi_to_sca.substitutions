@@ -1,0 +1,21 @@
+file "../../dxpApp/Db/roi_to_sca.db"
+{
+pattern
+{P,          M,    D,     N}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 0}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 1}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 2}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 3}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 4}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 5}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 6}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 7}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 8}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 9}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 10}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 11}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 12}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 13}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 14}
+{"XF:23ID1-ES{Vortex}", mca1, dxp1:, 15}
+}

@@ -1,0 +1,5 @@
+NAME=cam-diag6
+PORT=4300
+USER=softioc
+HOST=xf23id1-ioc3
+

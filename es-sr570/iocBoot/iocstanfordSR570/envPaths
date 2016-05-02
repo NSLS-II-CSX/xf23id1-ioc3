@@ -1,0 +1,4 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","iocstanfordSR570")
+epicsEnvSet("TOP","/epics/iocs/es-sr570")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

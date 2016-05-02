@@ -1,0 +1,90 @@
+#% macro, SPORT, Asyn port for eloss commands 
+# usually PMAC_S<n> for pmacs, the name of the pmacAsynIpPort for bricks
+#% macro, HOME, Prefix for autohome instance. Defaults to $P. If unspecified,
+# the template contains enough records to keep the motor record happy
+#% macro, ALLOW_HOMED_SET, Set to a blank to allow this axis to have its homed
+# status manually.  This is set to a comment character by default.
+
+#include "basic_asyn_motor.template"
+#include "motor_in_cs.template"
+
+# disable motor when homing
+record(calcout, "$(SYS)$(DEV)Dsbl:Hmng-Calc") {
+  field(INPA, "$(SYS)$(DEV)Sts:Homing-Sts CP")
+}
+
+# dummy record in case we aren't homing
+record(busy, "$(SYS)$(DEV)Sts:Homing-Sts") {
+}
+
+record(calcout, "$(SYS)$(DEV)Val:ASLO-I") {
+  field(INPA, "$(SYS)$(DEV)-Mtr.MRES CP")
+  field(INPB, "$(SYS)$(DEV)Val:Scale-I")  
+  field(CALC, "A*B")
+  field(OUT, "$(SYS)$(DEV)Pos:Raw-I.ASLO")
+}
+
+# reports position of motor without offset
+record(ai, "$(SYS)$(DEV)Pos:Raw-I") {
+  field(DTYP, "stream")
+  field(INP, "@pmac.proto getVar(#$(ADDR)P) $(SPORT)")
+  field(DESC, "$(DESC)")
+  field(SCAN, ".2 second")
+  field(SDIS, "$(SYS)$(DEV)Sts:Homing-Sts")  
+  field(DISV, "0")  
+  field(PINI, "YES")
+  field(PREC, "$(PREC)")
+  field(LINR, "LINEAR")
+  field(EGU, "$(EGU)")
+}
+
+# at startup, tell autohome template about this motor
+record(stringout, "$(SYS)$(DEV)Cmd:SetHm-StringOut") {
+  field(PINI, "YES")
+  field(VAL, "$(SYS)$(DEV)")
+  field(OUT, "$(SYS)$(DEV)Addr:Homing-I PP")
+}
+
+record(stringout, "$(SYS)$(DEV)Addr:Homing-I"){
+}
+
+# define a kill record
+record(ao, "$(SYS)$(DEV)Cmd:Kill-Cmd") {
+  field(DTYP, "stream")
+  field(OUT, "@pmac.proto killMotor($(ADDR)) $(SPORT)")  
+  field(VAL, "0")  
+}
+
+record(calc, "$(SYS)$(DEV)Addr:ELoss-I") {
+  field(CALC, "464+$(ADDR)")
+  field(PINI, "YES")
+}
+
+record(ai, "$(SYS)$(DEV)Flt:ELoss-Sts") {
+  field(DTYP, "stream")
+  field(INP, "@pmac.proto getEloss($(SYS)$(DEV)) $(SPORT)")  
+  field(SCAN, "5 second")  
+}
+
+record(calcout, "$(SYS)$(DEV)Rst:ELoss-Cmd") {
+  field(DTYP, "stream")
+  field(OUT, "@pmac.proto resetEloss($(SYS)$(DEV)) $(SPORT)") 
+  field(DESC, "Write 0 to A to reset Eloss")
+  field(CALC, "A")
+  field(A, "0")  
+}
+
+$(ALLOW_HOMED_SET=#)record(bo, "$(SYS)$(DEV)Sts:Homed-Sts") {
+$(ALLOW_HOMED_SET=#)  field(DESC, "Set homed status for axis $(ADDR)")
+$(ALLOW_HOMED_SET=#)  field(ZNAM, "NOT HOMED")
+$(ALLOW_HOMED_SET=#)  field(ONAM, "HOMED")
+$(ALLOW_HOMED_SET=#)  field(FLNK, "$(SYS)$(DEV)Sts:Homed-Sts")
+$(ALLOW_HOMED_SET=#)}
+
+$(ALLOW_HOMED_SET=#)record(calcout, "$(SYS)$(DEV)Sts:Homed-Calcout") {
+$(ALLOW_HOMED_SET=#)  field(DESC, "Homed status")
+$(ALLOW_HOMED_SET=#)  field(DTYP, "stream")
+$(ALLOW_HOMED_SET=#)  field(CALC, "A")
+$(ALLOW_HOMED_SET=#)  field(INPA, "$(SYS)$(DEV)Sts:Homed-Sts")
+$(ALLOW_HOMED_SET=#)  field(OUT, "@pmac.proto setIntVar(m$(ADDR)45) $(SPORT)")
+$(ALLOW_HOMED_SET=#)}

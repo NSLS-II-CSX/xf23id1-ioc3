@@ -1,0 +1,5 @@
+NAME=es-vortex
+PORT=4301
+USER=softioc
+HOST=xf23id1-ioc3
+

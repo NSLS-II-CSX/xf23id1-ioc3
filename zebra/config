@@ -1,0 +1,4 @@
+NAME=zebra
+USER=softioc
+PORT=5011
+HOST=xf23id1-ioc3

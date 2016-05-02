@@ -1,0 +1,53 @@
+TOP=../..
+
+include $(TOP)/configure/CONFIG
+#----------------------------------------
+#  ADD MACRO DEFINITIONS AFTER THIS LINE
+#=============================
+
+#=============================
+# Build the IOC application
+
+PROD_IOC = K2611
+# K2611.dbd will be created and installed
+DBD += K2611.dbd
+
+# K2611.dbd will be made up from these files:
+K2611_DBD += base.dbd
+
+# Include dbd files from all support applications:
+K2611_DBD += caPutLog.dbd
+K2611_DBD += asyn.dbd
+K2611_DBD += stream.dbd
+K2611_DBD += drvAsynIPPort.dbd
+K2611_DBD += system.dbd
+K2611_DBD += asSupport.dbd
+K2611_DBD += devIocStats.dbd
+
+
+# Add all the support libraries needed by this IOC
+K2611_LIBS += caPutLog
+K2611_LIBS += stream
+K2611_LIBS += asyn
+K2611_LIBS += devIocStats
+K2611_LIBS += autosave
+
+# K2611_registerRecordDeviceDriver.cpp derives from K2611.dbd
+K2611_SRCS += K2611_registerRecordDeviceDriver.cpp
+
+# Build the main IOC entry point on workstation OSs.
+K2611_SRCS_DEFAULT += K2611Main.cpp
+K2611_SRCS_vxWorks += -nil-
+
+# Add support from base/src/vxWorks if needed
+#K2611_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
+
+# Finally link to the EPICS Base libraries
+K2611_LIBS += $(EPICS_BASE_IOC_LIBS)
+
+#===========================
+
+include $(TOP)/configure/RULES
+#----------------------------------------
+#  ADD RULES AFTER THIS LINE
+

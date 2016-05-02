@@ -1,0 +1,58 @@
+#!/epics/iocs/areaDetectorR1-9-1/bin/linux-x86_64/prosilicaApp
+
+errlogInit(20000)
+
+< envPaths
+
+epicsEnvSet("EPICS_CA_MAX_ARRAY_BYTES","40000000")
+epicsEnvSet("TOP", "${PWD}")
+epicsEnvSet("PORT",   "CAM")
+epicsEnvSet("PREFIX", "XF:23ID1-ES{Dif-Cam:1}")
+epicsEnvSet("QSIZE",  "20")
+epicsEnvSet("XSIZE",  "2750")
+epicsEnvSet("YSIZE",  "2200")
+epicsEnvSet("NCHANS", "2048")
+epicsEnvSet("HIST_SIZE", "16384")
+epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
+epicsEnvSet("EPICS_CA_ADDR_LIST", "10.23.0.255")
+
+dbLoadDatabase("$(AREA_DETECTOR)/dbd/prosilicaApp.dbd")
+prosilicaApp_registerRecordDeviceDriver(pdbbase)
+
+prosilicaConfig("$(PORT)", "10.23.1.29", -1, -1)
+
+asynSetTraceIOMask("$(PORT)",0,2)
+
+dbLoadRecords("$(AREA_DETECTOR)/db/ADBase.template",   "P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
+dbLoadRecords("$(AREA_DETECTOR)/db/NDFile.template",   "P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1")
+# Note that prosilica.template must be loaded after NDFile.template to replace the file format correctly
+dbLoadRecords("$(AREA_DETECTOR)/db/prosilica.template","P=$(PREFIX),R=cam1:,PORT=$(PORT),ADDR=0,TIMEOUT=1,TRSCAN=Passive")
+
+# Create a standard arrays plugin, set it to get data from first Prosilica driver.
+NDStdArraysConfigure("Image1", 5, 0, "$(PORT)", 0, 0)
+dbLoadRecords("$(AREA_DETECTOR)/db/NDPluginBase.template","P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,NDARRAY_PORT=$(PORT),NDARRAY_ADDR=0")
+dbLoadRecords("$(AREA_DETECTOR)/db/NDStdArrays.template", "P=$(PREFIX),R=image1:,PORT=Image1,ADDR=0,TIMEOUT=1,TYPE=Int16,FTVL=SHORT,NELEMENTS=20000000")
+
+# Load all other plugins using commonPlugins.cmd
+< commonPlugins.cmd
+
+system("install -m 777 -d ${TOP}/as/save")
+system("install -m 777 -d ${TOP}/as/req")
+
+
+dbLoadRecords ("$(EPICS_BASE)/db/iocAdminSoft.db", "IOC=$(PREFIX)")
+dbLoadRecords ("$(EPICS_BASE)/db/save_restoreStatus.db", "P=$(PREFIX)")
+save_restoreSet_status_prefix("$(PREFIX)")
+
+asSetFilename("/epics/xf/23id/xf23id.acf")
+iocInit()
+caPutLogInit("xf23id-ca:7004", 0)
+
+# save things every thirty seconds
+create_monitor_set("auto_settings.req", 30,"P=$(PREFIX),D=cam1:")
+
+# Channel Finder
+dbl > ./records.dbl
+system "cp ./records.dbl /cf-update/xf23id1-ioc1.cam-dif1.dbl"
+
+

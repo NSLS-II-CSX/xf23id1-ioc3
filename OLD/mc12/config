@@ -1,0 +1,4 @@
+NAME=mc12
+USER=softioc
+PORT=5002
+HOST=xf23id1-ioc3

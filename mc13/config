@@ -1,0 +1,4 @@
+NAME=mc13
+USER=softioc
+PORT=5003
+HOST=xf23id1-ioc3

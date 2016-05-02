@@ -1,0 +1,5 @@
+NAME=cam-diag1
+PORT=4202
+USER=softioc
+HOST=xf23id1-ioc3
+

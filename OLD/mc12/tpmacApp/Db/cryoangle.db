@@ -1,0 +1,86 @@
+record(transform, "XF:23ID1-ES{Dif-Cryo}Pos:F-Trans"){
+  field(INPC, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-SP NPP")
+  field(CLCD, "asin((A*cos(D2R*C)+B*sin(D2R*C))/2.26)*R2D")
+  field(CLCE, "-asin((-A*sin(D2R*C)+B*cos(D2R*C))/2.26)*R2D")
+  field(OUTD, "XF:23ID1-ES{Dif-Ax:Y}Mtr.VAL PP")
+  field(OUTE, "XF:23ID1-ES{Dif-Ax:Z}Mtr.VAL PP")
+  field(PREC, "3")
+  field(EGU,  "mm")
+  info(autosaveFields, "A B")
+}
+
+record(transform, "XF:23ID1-ES{Dif-Cryo}Pos:R-Trans"){
+  field(INPA, "XF:23ID1-ES{Dif-Ax:Y}Mtr.RBV CP NMS")
+  field(INPB, "XF:23ID1-ES{Dif-Ax:Z}Mtr.RBV CP NMS")
+  field(INPC, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-SP NPP")
+  field(CLCD, "2.26*sin(A*D2R)*cos(D2R*C)-(-2.26*sin(B*D2R))*sin(D2R*C)")
+  field(CLCE, "2.26*sin(A*D2R)*sin(D2R*C)+(-2.26*sin(B*D2R))*cos(D2R*C)")
+  field(OUTC, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-RB PP")
+  field(OUTD, "XF:23ID1-ES{Dif-Ax:SY}Pos-RB PP")
+  field(OUTE, "XF:23ID1-ES{Dif-Ax:SZ}Pos-RB PP")
+  field(PINI, "1")
+  field(PREC, "3")
+  field(EGU,  "mm")
+}
+
+record(bo, "XF:23ID1-ES{Dif-Cryo}Cmd:Stop-Cmd"){
+  field(FLNK, "XF:23ID1-ES{Dif-Cryo}Cmd:Stop-Cmd_")
+}
+
+record(seq, "XF:23ID1-ES{Dif-Cryo}Cmd:Stop-Cmd_"){
+  field(LNK1, "XF:23ID1-ES{Dif-Ax:Y}Mtr.STOP")
+  field(LNK2, "XF:23ID1-ES{Dif-Ax:Z}Mtr.STOP")
+  field(SELM, "All")
+  field(DOL1, "1")
+  field(DOL2, "1")
+}
+
+record(ao, "XF:23ID1-ES{Dif-Cryo}Pos:AngleU-SP"){
+	field(FLNK, "XF:23ID1-ES{Dif-Cryo}Pos:AngleU-Calc")		
+}
+
+record(calcout, "XF:23ID1-ES{Dif-Cryo}Pos:AngleU-Calc"){
+	field(OUT, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-SP PP")
+	field(INPA, "XF:23ID1-ES{Dif-Ax:Th}Mtr.OFF NPP")
+	field(INPB, "XF:23ID1-ES{Dif-Cryo}Pos:AngleU-SP NPP")
+	field(CALC, "B-A")
+}
+
+record(ao, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-SP"){
+  field(PREC, "3")
+  field(EGU,  "deg")
+  field(FLNK, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-Fout_")
+  info(autosaveFields, "VAL")
+}
+
+record(ai, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-RB"){
+  field(PREC, "3")
+  field(EGU,  "deg")
+}
+
+record(fanout, "XF:23ID1-ES{Dif-Cryo}Pos:Angle-Fout_"){
+  field(LNK1, "XF:23ID1-ES{Dif-Cryo}Pos:R-Trans")
+  #field(LNK2, "XF:23ID1-ES{Dif-Cryo}Pos:F-Trans")
+}
+
+record(ai, "XF:23ID1-ES{Dif-Ax:SY}Pos-RB"){
+  field(PREC, "3")
+  field(EGU,  "mm")
+}
+
+record(ai, "XF:23ID1-ES{Dif-Ax:SZ}Pos-RB"){
+  field(PREC, "3")
+  field(EGU,  "mm")
+}
+
+record(ao, "XF:23ID1-ES{Dif-Ax:SY}Pos-SP"){
+  field(PREC, "3")
+  field(EGU,  "mm")
+  field(OUT,  "XF:23ID1-ES{Dif-Cryo}Pos:F-Trans.A PP")
+}
+
+record(ao, "XF:23ID1-ES{Dif-Ax:SZ}Pos-SP"){
+  field(PREC, "3")
+  field(EGU,  "mm")
+  field(OUT,  "XF:23ID1-ES{Dif-Cryo}Pos:F-Trans.B PP")
+}

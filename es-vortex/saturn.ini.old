@@ -1,0 +1,35 @@
+[detector definitions]
+
+* Vortex Si Detector
+START #1
+alias = detector1
+number_of_channels = 1
+type = reset
+type_value = 10.
+channel0_gain = 2.0
+channel0_polarity = +
+END #1
+
+[firmware definitions]
+
+START #1
+alias = firmware1
+* For 20 MHz Saturn with reset pre-amps use the following line
+filename = saturn_reset_revc4b.fdd
+*filename = saturn_reset_v1_13.fdd
+END #1
+
+[module definitions]
+
+START #1
+alias = module1
+module_type = saturn
+number_of_channels = 1
+interface = usb2
+device_number = 0
+channel0_alias = 0
+channel0_detector = detector1:0
+channel0_gain = 2.0
+firmware_set_all = firmware1
+END #1
+

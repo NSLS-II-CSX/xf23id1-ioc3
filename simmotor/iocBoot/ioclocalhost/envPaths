@@ -1,0 +1,4 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","ioclocalhost")
+epicsEnvSet("TOP","/epics/iocs/simmotor")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")

@@ -1,0 +1,14 @@
+## Database template for Temperature tags in IXS EPS PLC
+
+record(ai, "$(Chan)-I")
+{
+    field(DESC, "Temperature indicator, degC")
+    field(SCAN, "I/O Intr")
+    field(DTYP, "EtherIP")
+    field(INP,  "@XF_23ID_EPS_ES1_PLC_F1 T_I[$(BIT)] S 1")
+    field(PREC, "1")
+    field(ASLO, "0.1")
+    field(EGU,  "C")
+}
+
+

@@ -1,0 +1,17 @@
+file "db/motor.db"
+{
+
+# ADDR ---> axis #
+# NOTE ---> 2 asyn ports: 1) lowel comms ("P0"), and 2) Motor Record ("motor")
+pattern
+{ P,             M,               MOTOR,   PORT,    ADDR, DESC,     DTYP }
+
+{ "XF:23ID1-ES", "{Dif:Lens-Ax:TopX}Mtr",      "motor", "PO",    1,  "Dif:Lens Top X", asynMotor }
+{ "XF:23ID1-ES", "{Dif:Lens-Ax:TopY}Mtr",      "motor", "PO",    2,  "Dif:Lens Top Y", asynMotor }
+{ "XF:23ID1-ES", "{Dif:Lens-Ax:TopZ}Mtr",      "motor", "PO",    3,  "Dif:Lens Top Z", asynMotor }
+
+{ "XF:23ID1-ES", "{Dif:Lens-Ax:BtmX}Mtr",      "motor", "PO",    4,  "Dif:Lens Bottom X", asynMotor }
+{ "XF:23ID1-ES", "{Dif:Lens-Ax:BtmY}Mtr",      "motor", "PO",    5,  "Dif:Lens Bottom Y", asynMotor }
+{ "XF:23ID1-ES", "{Dif:Lens-Ax:BtmZ}Mtr",      "motor", "PO",    6,  "Dif:Lens Bottom Z", asynMotor }
+
+}

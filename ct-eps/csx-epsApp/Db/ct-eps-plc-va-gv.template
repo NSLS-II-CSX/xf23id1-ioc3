@@ -1,0 +1,150 @@
+## Database for Vacuum GV tags in IXS EPS PLC
+
+## Substitutions:
+## Sys          -       System
+## PLC          -       PLC name
+## Dev          -       GV name
+## Indx		- 	GV index in PLC
+
+# GV signals
+record(bi, "$(Sys){$(Dev)}Sw:OpnLim-Sts")
+{
+        field(DESC, "$(Dev) Opn Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.OpnSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "$(Sys){$(Dev)}Sw:ClsLim-Sts")
+{
+        field(DESC, "$(Dev) Cls Limit Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.ClsSw S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "In Position")
+}
+
+record(bi, "$(Sys){$(Dev)}Sts:Coil-Sts")
+{
+        field(DESC, "$(Dev) Coil Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.Coil1 S 0.5")
+        field(ZNAM, "Not Energized")
+        field(ONAM, "Energized")
+}
+
+record(bi, "$(Sys){$(Dev)}Pos-Sts")
+{
+        field(DESC, "$(Dev) Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.Sts S 0.5")
+        field(ZNAM, "Not Open")
+        field(ONAM, "Open")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "$(Sys){$(Dev)}Err-Sts")
+{
+        field(DESC, "$(Dev) Err Status")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.StsFault S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "$(Sys){$(Dev)}Sts:FailOpn-Sts")
+{
+        field(DESC, "$(Dev) Fail Open")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.FailedToOpn S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+	field(ZSV,  "MINOR")
+}
+
+record(bi, "$(Sys){$(Dev)}Sts:FailCls-Sts")
+{
+        field(DESC, "$(Dev) Fail Close")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.FailedToCls S 0.5")
+        field(ZNAM, "Error")
+        field(ONAM, "OK")
+        field(ZSV,  "MINOR")
+}
+
+record(bi, "$(Sys){$(Dev)}Sts:DS_Intlk-Sts")
+{
+        field(DESC, "$(Dev) DS I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.LockDS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+record(bi, "$(Sys){$(Dev)}Sts:US_Intlk-Sts")
+{
+        field(DESC, "$(Dev) US I/L Sts")
+        field(SCAN, "I/O Intr")
+        field(DTYP, "EtherIP")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Sts.LockUS S 0.5")
+        field(ZNAM, "Interlocked")
+        field(ONAM, "OK")
+        field(ZSV,  "MAJOR")
+}
+
+# GV commands
+record(bo, "$(Sys){$(Dev)}Cmd:Opn-Cmd")
+{
+        field(DESC, "$(Dev) Open Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Cmd.OpnCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Open")
+}
+
+record(bo, "$(Sys){$(Dev)}Cmd:Cls-Cmd")
+{
+        field(DESC, "$(Dev) Close Cmd")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@XF_23ID_EPS_ES1_PLC_F1 GV_$(Indx)_Cmd.ClsCmd S 0.5")
+        field(ZNAM, "None")
+        field(ONAM, "Close")
+}
+
+# GV status calculation
+record(calc, "$(Sys){$(Dev)}DB:Pos-Calc_")
+{
+        field(DESC, "$(Dev) Calc")
+        field(SCAN, ".5 second")
+        field(INPA, "$(Sys)$(Dev)Err-Sts NPP MS")
+        field(INPB, "$(Sys)$(Dev)Pos-Sts NPP MS")
+        field(CALC, "!A?2:B?1:0")
+        field(FLNK, "$(Sys)$(Dev)DB:Pos-Sts")
+}
+
+record(mbbi, "$(Sys){$(Dev)}DB:Pos-Sts")
+{
+        field(DESC, "$(Dev) Sts")
+        field(SCAN, "Passive")
+        field(INP,  "$(Sys)$(Dev)DB:Pos-Calc_ NPP MS")
+        field(ZRST, "Closed")
+        field(ONST, "Open")
+        field(TWST, "Error")
+        field(ZRSV, "MINOR")
+        field(TWSV, "MAJOR")
+}
+
+

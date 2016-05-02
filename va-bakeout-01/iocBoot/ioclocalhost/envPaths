@@ -1,0 +1,5 @@
+epicsEnvSet("ARCH","linux-x86_64")
+epicsEnvSet("IOC","ioclocalhost")
+epicsEnvSet("TOP","/epics/iocs/va-bakeout-01")
+epicsEnvSet("EPICS_BASE","/usr/lib/epics")
+epicsEnvSet("SNCSEQ","/usr/lib/epics")

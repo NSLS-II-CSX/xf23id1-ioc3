@@ -1,0 +1,4 @@
+NAME=mc11
+USER=softioc
+PORT=5001
+HOST=xf23id1-ioc3

@@ -1,0 +1,16 @@
+record(ai, "$(P)$(R)-Raw_") {
+    field(SCAN, "1 second")
+    field(DESC, "$(R) raw")
+    field(DTYP, "stream")
+    field(INP, "@pmac.proto getVar($(VAR)) $(PORT) $(ADDR)")
+    field(FLNK, "$(P)$(R)-I")
+    # field(TPRO, 1)
+}
+
+record(calc, "$(P)$(R)-I") {
+    field(DESC, "$(R)")
+    field(SCAN, "Passive")
+    field(INPA, "$(P)$(R)-Raw_ NPP")
+    field(CALC, "A*$(SCALE)+$(OFFSET)")
+}
+

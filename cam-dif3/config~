@@ -1,0 +1,7 @@
+# global config file for softioc start script
+NAME=cam-dif2
+PORT=4205
+USER=softioc
+HOST=xf23id1-ioc3
+
+

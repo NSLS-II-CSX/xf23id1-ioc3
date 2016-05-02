@@ -1,0 +1,15 @@
+file "db/pmac_asyn_motor.db"
+{
+
+pattern
+{SYS,              DEV,                 MOTOR,  SPORT,  ADDR,  DESC,        DTYP        PREC,  EGU }
+{"XF:23ID1-ES",    "{Dif-Ax:Del}",      "motor", "P0",    1,    "Delta",    "asynMotor",  4,      "deg" }
+{"XF:23ID1-ES",    "{Dif-Ax:Th}",      "motor", "P0",    2,    "Theta",     "asynMotor",  4,      "deg" }
+{"XF:23ID1-ES",    "{Dif-Ax:Gam}",      "motor", "P0",    3,    "Gamma",    "asynMotor",  4,      "deg" }
+{"XF:23ID1-ES",    "{Dif-Ax:MuR}",      "motor", "P0",    4,    "Mu Rotation","asynMotor",  4,    "deg" }
+{"XF:23ID1-ES",    "{Dif-Ax:MuT}",      "motor", "P0",    5,    "Mu Translation","asynMotor",  4, "mm" }
+{"XF:23ID1-ES",    "{Dif-Ax:X}",      "motor", "P0",    6,    "Sample X",  "asynMotor",  4,      "mm" }
+{"XF:23ID1-ES",    "{Dif-Ax:Y}",      "motor", "P0",    7,    "Sample Y",  "asynMotor",  4,      "mm" }
+{"XF:23ID1-ES",    "{Dif-Ax:Z}",      "motor", "P0",    8,    "Sample Z",  "asynMotor",  4,      "mm" }
+
+}

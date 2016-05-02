@@ -1,0 +1,7 @@
+# global config file for softioc start script
+NAME=cam-dif-beam
+PORT=4201
+USER=softioc
+HOST=xf23id1-ioc3
+
+

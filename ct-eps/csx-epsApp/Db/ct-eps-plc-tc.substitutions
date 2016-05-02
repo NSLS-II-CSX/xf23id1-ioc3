@@ -1,0 +1,8 @@
+file ct-eps-plc-tc.template
+{	
+	pattern { Chan, BIT, HIHI, HIGH}
+{ "XF:23ID1-ES{Dif-Ax:Gam}T" , 0 , "", ""}
+{ "XF:23ID1-OP{Sh:Fast}T"    , 1 , "", ""}
+{ "XF:23ID1-ES{FCCD-N2}T"    , 2 , "", ""}
+
+}

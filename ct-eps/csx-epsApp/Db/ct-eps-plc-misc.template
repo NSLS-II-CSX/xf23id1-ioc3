@@ -1,0 +1,536 @@
+## Database for Misc tags in CSX1 ES EPS PLC
+
+record(bi, "XF:23ID1-CT{Dif-LoadLck-Trans}Sw:NO-Sts")
+{
+	field(DESC, "Sample Transfer Retracted Switch NO")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[0]")
+	field(ZNAM, "Retracted")
+	field(ONAM, "Not Retracted")
+}
+
+record(bi, "XF:23ID1-CT{Dif-LoadLck-Trans}Sw:NC-Sts")
+{
+	field(DESC, "Sample Transfer Retracted Switch NC")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[1]")
+	field(ZNAM, "Not Retracted")
+	field(ONAM, "Retracted")
+}
+
+record(bi, "XF:23ID1-CT{PLC:ES}Out:VaES-Sts")
+{
+	field(DESC, "Vacuum status from End Station to Beamline EPS PLC")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[2]")
+	field(ZNAM, "Interlock")
+	field(ONAM, "OK")
+	field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-CT{PLC:ES}In:VaBL-Sts")
+{
+	field(DESC, "Vacuum status from Beamline EPS PLC")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[3]")
+	field(ZNAM, "Interlock")
+	field(ONAM, "OK")
+	field(ZSV, "MINOR")
+}
+
+
+record(bi, "XF:23ID1-VA{Dif-TMP:1}Sts:Run-Sts")
+{
+	field(DESC, "STP Pump controller Normal Operation")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[4]")
+	field(ZNAM, "Abnormal")
+	field(ONAM, "Normal")
+	field(ZSV, "MINOR")
+}
+
+
+record(bi, "XF:23ID1-VA{Dif-TMP:1}Sts:Alarm-Sts")
+{
+	field(DESC, "STP Pump controller Alarm status")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[5]")
+	field(ZNAM, "Alarm")
+	field(ONAM, "OK")
+	field(ZSV, "MINOR")
+}
+
+
+record(bi, "XF:23ID1-VA{Dif-TMP:1}Cmd:Start-Sts")
+{
+	field(DESC, "STP Pump controller Start/Stop command status")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[6]")
+	field(ZNAM, "Stop")
+	field(ONAM, "Start")
+}
+
+
+record(bi, "XF:23ID1-VA{Dif-TMP:1}Cmd:Reset-Sts")
+{
+	field(DESC, "STP Pump controller Reset command status")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[7]")
+}
+
+record(bo, "XF:23ID1-VA{Dif-TMP:1}Cmd:Start-Cmd")
+{
+	field(DESC, "STP Pump controller Start command")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(OUT, "@$(PLC) STP_Start_Cmd")
+	field(ZNAM, "Stop")
+	field(ONAM, "Start")
+}
+
+record(bo, "XF:23ID1-VA{Dif-TMP:1}Cmd:Reset-Cmd")
+{
+	field(DESC, "STP Pump controller Reset command")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(OUT, "@$(PLC) STP_Rst_Cmd")
+	field(ZNAM, "None")
+	field(ONAM, "Reset")
+}
+
+
+record(bi, "XF:23ID1-VA{Dif:LoadLck-TMP:1}Sts:Run-Sts")
+{
+	field(DESC, "NPT 10 Turbo Pump Controller Normal operation")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[8]")
+	field(ZNAM, "Abnormal")
+	field(ONAM, "Normal")
+	field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif:LoadLck-TMP:1}Cmd:Start-Sts")
+{
+	field(DESC, "NPT 10 Start/Stop Command Status")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_1[9]")
+	field(ZNAM, "Stop")
+	field(ONAM, "Start")
+}
+
+record(bi, "XF:23ID1-ES{Dif:LoadLck-Trans}Pos-Sts")
+{
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[10]")
+        field(ZNAM, "Not retracted")
+        field(ONAM, "Retracted")
+}
+
+record(bi, "XF:23ID1-ES{Dif:LoadLck-Trans}Sts:Flt-Sts")
+{
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[11]")
+        field(ZNAM, "Fault")
+        field(ONAM, "OK")
+}
+
+record(bi, "XF:23ID1-ES{TCtrl:1}Alrm:1-Sts")
+{
+        field(DESC, "LakeShore Temp Controller Contact 0 NO")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[14]")
+        field(ZNAM, "OK")
+        field(ONAM, "Alarm")
+        field(OSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-ES{TCtrl:1}Alrm:2-Sts")
+{
+        field(DESC, "LakeShore Temp Controller Contact 1 NC")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[15]")
+        field(ZNAM, "Alarm")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-ES{FCCD}Va-Sts")
+{
+        field(DESC, "Main chamber vacuum sts for CCD")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[16]")
+        field(ZNAM, "Alarm")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV2 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[17]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:2}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV2 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[18]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV3 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[19]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:3}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV3 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[20]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV4 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[21]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:4}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV4 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[22]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV5 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[23]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:5}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV5 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[24]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV6 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[25]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:6}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV6 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[26]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV7 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[27]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-Vlv:7}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV7 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[28]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Permit:Opn-Sts")
+{
+        field(DESC, "Dif GV8 Permit to Open")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[29]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-GV:8}Permit:Cls-Sts")
+{
+        field(DESC, "Dif GV8 Permit to Close")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[30]")
+        field(ZNAM, "No Permit")
+        field(ONAM, "OK")
+        field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif-TMP:2}Sts:Run-Sts")
+{
+        field(DESC, "Rotation speed switch point attained")
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) Misc_Sts_1[31]")
+        field(ZNAM, "Not At Speed")
+        field(ONAM, "At Speed")
+}
+
+record(bi, "XF:23ID1-VA{Dif:DifSeal-TMP:1}Sts:Run-Sts")
+{
+	field(DESC, "NPT 10 Turbo Pump Seal Normal operation")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_2[0]")
+	field(ZNAM, "Abnormal")
+	field(ONAM, "Normal")
+	field(ZSV, "MINOR")
+}
+
+record(bi, "XF:23ID1-VA{Dif:DifSeal-TMP:1}Cmd:Start-Sts")
+{
+	field(DESC, "Seal NPT 10 Start/Stop Command Status")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(INP, "@$(PLC) Misc_Sts_2[1]")
+	field(ZNAM, "Stop")
+	field(ONAM, "Start")
+}
+
+# TCtrl:1 status calculation
+record(calc, "XF:23ID1-ES{TCtrl:1}DB:Alrm-Calc_")
+{
+        field(SCAN, ".5 second")
+        field(INPA, "XF:23ID1-ES{TCtrl:1}Alrm:1-Sts NPP MS")
+        field(INPB, "XF:23ID1-ES{TCtrl:1}Alrm:2-Sts NPP MS")
+        field(CALC, "A?2:B?1:0")
+        field(FLNK, "XF:23ID1-ES{TCtrl:1}DB:Alrm-Sts")
+}
+
+record(mbbi, "XF:23ID1-ES{TCtrl:1}DB:Alrm-Sts")
+{
+        field(INP,  "XF:23ID1-ES{TCtrl:1}DB:Alrm-Calc_ NPP MS")
+        field(ZRST, "Misconn")
+        field(ONST, "OK")
+        field(TWST, "Alarm")
+        field(TRST, "Undefined")
+        field(ZRSV, "MAJOR")
+        field(TWSV, "MAJOR")
+        field(TRSV, "MAJOR")
+}
+
+record(bo, "XF:23ID1-ES{FCCD}Cmd:Rst-Cmd")
+{
+        field(DESC, "FCCD Camera Temp and VA Interlock Reset")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_FCCD_Rst_Cmd")
+        field(ZNAM, "None")
+        field(ONAM, "Reset")
+}
+
+record(bo, "XF:23ID1-VA{Dif:LoadLck-TMP:1}Cmd:Start-Cmd")
+{
+	field(DESC, "NPT 10 Start/Stop Command")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(OUT, "@$(PLC) NPT_Start_Cmd")
+        field(ZNAM, "Stop")
+        field(ONAM, "Start")
+}
+
+record(bo, "XF:23ID1-VA{Dif:DifSeal-TMP:1}Cmd:Start-Cmd")
+{
+	field(DESC, "NPT 10 Start/Stop Command")
+	field(SCAN, "1 second")
+	field(DTYP, "EtherIP")
+	field(OUT, "@$(PLC) DifSeal_Start_Cmd")
+        field(ZNAM, "Stop")
+        field(ONAM, "Start")
+}
+
+record(bo, "XF:23ID1-ES{LED:1}Sw-Cmd")
+{
+        field(DESC, "ES LED 1 Switch Command")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_LED1_Cmd")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+}
+
+record(bo, "XF:23ID1-ES{LED:2}Sw-Cmd")
+{
+        field(DESC, "ES LED 2 Switch Command")
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_LED2_Cmd")
+        field(ZNAM, "Off")
+        field(ONAM, "On")
+}
+
+record(bo, "XF:23ID1-ES{FCCD-PSU}Sw-Sel")
+{
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_FCCD_PSUSw_Sel")
+}
+
+record(bi, "XF:23ID1-ES{FCCD-PSU}Sw-Sts")
+{
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) ID1_ES_FCCD_PSUSw_Sts")
+	field(ZNAM, "Zero")
+	field(ONAM, "One")
+}
+
+
+record(bo, "XF:23ID1-ES{FCCD-N2}Sw:Main-Sel")
+{
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_FCCD_N2SwMain_Sel")
+}
+
+record(bi, "XF:23ID1-ES{FCCD-N2}Sw:Main-Sts")
+{
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) ID1_ES_FCCD_N2SwMain_Sts")
+        field(ZNAM, "Zero")
+        field(ONAM, "One")
+}
+
+
+record(bo, "XF:23ID1-ES{FCCD-N2}Sw:Gas-Sel")
+{
+        field(SCAN, "Passive")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_FCCD_N2SwGas_Sel")
+}
+
+record(bi, "XF:23ID1-ES{FCCD-N2}Sw:Gas-Sts")
+{
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) ID1_ES_FCCD_N2SwGas_Sts")
+        field(ZNAM, "Zero")
+        field(ONAM, "One")
+}
+
+
+record(bo, "XF:23ID1-ES{FCCD-CIN}Sw:FP-Sel")
+{
+        field(SCAN, "Passive")
+	field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_ES_FCCD_CINSwFP_Sel")
+}
+
+record(bi, "XF:23ID1-ES{FCCD-CIN}Sw:FP-Sts")
+{
+        field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(INP, "@$(PLC) ID1_ES_FCCD_CINSwFP_Sts")
+        field(ZNAM, "Zero")
+        field(ONAM, "One")
+}
+
+record(bo, "XF:23ID1-VA{Dif-TMP:2}PumpStation-Cmd")
+{
+        field(DESC, "Pumping station On and Err ACK")
+	field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_VA_Dif_TMP2_Pumping")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+}
+
+record(bo, "XF:23ID1-VA{Dif-TMP:2}Cmd:Start-Cmd")
+{
+        field(DESC, "Drive Motor pump command")
+	field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_VA_Dif_TMP2_Motor")
+	field(ZNAM, "Drive Motor Off")
+	field(ONAM, "Drive Motor On")
+}
+
+record(bo, "XF:23ID1-VA{Dif-TMP:2}Standby-Cmd")
+{
+        field(DESC, "Standby rotation speed command")
+	field(SCAN, "1 second")
+        field(DTYP, "EtherIP")
+        field(OUT, "@$(PLC) ID1_VA_Dif_TMP2_Standby")
+	field(ZNAM, "Off")
+	field(ONAM, "On")
+}
+
+

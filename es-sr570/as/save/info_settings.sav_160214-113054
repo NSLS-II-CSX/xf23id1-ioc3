@@ -1,0 +1,21 @@
+# autosave R5.0	Automatically generated - DO NOT MODIFY - 160214-113042
+XF:23ID1-ES{CurrAmp:1}Bias-SP.VAL 0
+XF:23ID1-ES{CurrAmp:1}Gain:Fine-SP.VAL 0
+XF:23ID1-ES{CurrAmp:1}Offset:Fine-SP.VAL 0
+XF:23ID1-ES{CurrAmp:1}Bias-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Mode:Cal-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Offset-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Offset:Cal-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Offset:Sign-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Out:Blank-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Out:Invert-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}FOut.SCAN 3
+XF:23ID1-ES{CurrAmp:1}Filter-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Filter:High-Sel.VAL 3
+XF:23ID1-ES{CurrAmp:1}Filter:Low-Sel.VAL 3
+XF:23ID1-ES{CurrAmp:1}Gain:Decade-SP.VAL 5
+XF:23ID1-ES{CurrAmp:1}Gain:Val-SP.VAL 2
+XF:23ID1-ES{CurrAmp:1}Mode:Gain-Sel.VAL 0
+XF:23ID1-ES{CurrAmp:1}Offset:Decade-SP.VAL 0
+XF:23ID1-ES{CurrAmp:1}Offset:Val-SP.VAL 0
+<END>

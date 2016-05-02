@@ -1,0 +1,18 @@
+## Database for Vacuum gauges and pump tags in IXS EPS PLC 
+
+## Substitutions:
+## Sys		-	System
+## PLC		-	PLC name
+## Dev		-	CCG, TCG, IP
+
+# $(Dev) IP $(Num) Set point relay signal
+record(bi, "$(Sys){$(Dev)-$(Comp):$(Num)}Sts:Rly1PLC-Sts")
+{
+        field(DESC, "$(Dev) IP $(Num) PLC SP Relay signal")
+        field(DTYP, "EtherIP")
+		field(SCAN, "I/O Intr")
+        field(INP, "@XF_23ID_EPS_ES1_PLC_F1 $(Comp)_Sts_1[$(Indx)] S 1")
+        field(ZNAM, "Relay Off")
+        field(ONAM, "Relay On")
+		field(ZSV,  "MINOR")
+}

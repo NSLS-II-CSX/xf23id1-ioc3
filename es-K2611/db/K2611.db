@@ -1,0 +1,188 @@
+#
+#
+#Scaling with units seems okay. Just make sure to check for the measurements in tardis.
+#Verified that you can change voltage in output_on mode and re-measure ivr.
+#
+
+
+#record(ao, "$(Sys)$(Dev)I-SP"){
+#	field(EGU, "Amps")
+#}
+
+record(stringin, "$(Sys)$(Dev)Val:Idnt-I"){
+	field(INP,"@K2611.proto Ident() $(PORT)")
+#	field(SCAN,"1 second")  		 #use together with stream for debug
+#	field(DTYP,"stream")
+}
+
+
+
+############read E I R
+record(ai, "$(Sys)$(Dev)Val:RB-E"){
+        field(INP,"@K2611.proto SourMeasV() $(PORT)")  
+        field(EGU, "Volts")
+	field(SCAN,"1 second")
+        field(DTYP,"stream")
+}
+
+record(ai, "$(Sys)$(Dev)Val:RB-I"){         
+        field(INP,"@K2611.proto SourMeasI() $(PORT)")   
+        field(EGU, "Amps")      
+        field(DTYP,"stream")
+        field(SCAN, "I/O Intr")
+} 
+
+record(ai, "$(Sys)$(Dev)Val:RB-R"){         
+        field(INP,"@K2611.proto SourMeasR() $(PORT)")   
+        field(EGU, "Ohms")      
+        field(DTYP,"stream") 
+	field(SCAN, "I/O Intr")
+}
+
+
+############on/off 
+#This record is correct format.  The output float is not an inteneger so this doesn't work. Convert to integer?
+#
+record(bi,"$(Sys)$(Dev)Val:Sts"){
+        field(INP,"@K2611.proto GetSourSts() $(PORT)")
+        field(DTYP,"stream")
+	field(ZNAM,"OFF")
+	field(ONAM,"ON")
+	field(SCAN, "1 second")
+}
+
+
+##  NOT WORKING DON"T KNOW WHY
+#record(stringout,"$(Sys)$(Dev)Val:Sts:Enable"){
+#        field(OUT,"@K2611.proto SetSourSts() $(PORT)")
+#        field(DTYP,"stream")
+#	field(VAL,"ON")
+#}
+
+#record(stringout,"$(Sys)$(Dev)Val:Sts:Disable"){
+#        field(OUT,"@K2611.proto SetSourSts() $(PORT)")
+#        field(DTYP,"stream")
+#	field(VAL,"OFF")
+#}
+
+
+
+
+
+
+
+###########voltage
+
+#record(stringin, "$(Sys)$(Dev)Val:RB-ESP"){
+record(ai, "$(Sys)$(Dev)Val:RB-ESP"){
+        field(INP,"@K2611.proto GetVsp() $(PORT)")  #INP means input?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(SCAN,"1 second")
+        field(DTYP,"stream")  
+}
+ 
+ 
+#record(ao, "$(Sys)$(Dev)Val:SP-E"){
+#record(stringin, "$(Sys)$(Dev)Val:SP-E"){
+record(ai, "$(Sys)$(Dev)Val:SP-E"){
+        field(INP,"@K2611.proto SetVsp() $(PORT)")  #INP means input?
+        #field(OUT,"@K2611.proto SetVsp() $(PORT)")  #OUT means output?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(DTYP,"stream")
+}
+
+
+
+
+
+record(stringin, "$(Sys)$(Dev)Val:LIM-E"){
+        field(INP,"@K2611.proto SetVlim() $(PORT)")  #INP means input?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(DTYP,"stream")  
+}
+
+#tried make the above ao with %f but can't get it to work, just like SP-E
+record(stringin, "$(Sys)$(Dev)Val:RB-ELIM"){
+        field(INP,"@K2611.proto GetVlim() $(PORT)")  #INP means input?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(SCAN,"1 second")
+        field(DTYP,"stream")  
+}
+
+#Also NOt working. Don't know why.
+#
+#record(bi,"$(Sys)$(Dev)Val:Sts:AutoRangV"){
+#        field(INP,"@K2611.proto GetAutoRangV() $(PORT)")
+#        field(DTYP,"stream")
+#        field(ZNAM,"OFF")
+#        field(ONAM,"ON")
+#        field(SCAN, "1 second")
+#}
+#
+#record(bi,"$(Sys)$(Dev)Val:Sts:AutoRangI"){
+#        field(INP,"@K2611.proto GetAutoRangI() $(PORT)")
+#        field(DTYP,"stream")
+#        field(ZNAM,"OFF")   
+#        field(ONAM,"ON")    
+#	field(SCAN, "1 second")
+##	field(SCAN, "I/O Intr")
+#}
+
+
+##tried the above the other way for changing the value. not working?
+#record(stringout,"$(Sys)$(Dev)Val:Sts:AutoRangV"){
+#        field(OUT,"@K2611.proto SetSourSts() $(PORT)")
+#        field(DTYP,"stream")
+#       field(VAL,"ON")
+#}
+
+#record(stringout,"$(Sys)$(Dev)Val:Sts:AutoRangV"){
+#        field(OUT,"@K2611.proto SetSourSts() $(PORT)")
+#        field(DTYP,"stream")
+#       field(VAL,"OFF")
+#}
+
+
+
+
+
+
+
+
+###############current
+
+#record(stringin, "$(Sys)$(Dev)Val:RB-ISP"){
+record(ai, "$(Sys)$(Dev)Val:RB-ISP"){
+        field(INP,"@K2611.proto GetIsp() $(PORT)")  #INP means input?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(SCAN,"1 second")
+        field(DTYP,"stream")  
+}
+ 
+ 
+##record(ao, "$(Sys)$(Dev)Val:SP-I"){
+#record(stringin, "$(Sys)$(Dev)Val:SP-I"){
+record(ai, "$(Sys)$(Dev)Val:SP-I"){
+        field(INP,"@K2611.proto SetIsp() $(PORT)")  #INP means input?
+        #field(OUT,"@K2611.proto SetVsp() $(PORT)")  #OUT means output?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(DTYP,"stream")
+        #info(autosaveFields, "VAL")
+}
+ 
+ 
+record(ai, "$(Sys)$(Dev)Val:LIM-I"){
+        field(INP,"@K2611.proto SetIlim() $(PORT)")  #INP means input?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(SCAN,"1 second")
+        field(DTYP,"stream")  
+}
+ 
+record(ai, "$(Sys)$(Dev)Val:RB-ILIM"){
+        field(INP,"@K2611.proto GetIlim() $(PORT)")  #INP means input?
+        field(EGU, "Volts")                       #EGU is engineering units  (EGUF - full scale, EGUL low scale)
+        field(SCAN,"1 second")
+        field(DTYP,"stream")  
+}
+ 
+

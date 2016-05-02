@@ -1,0 +1,16 @@
+file "db/sensor.db"
+{
+
+pattern
+{SENSOR,  MTR,	MEAN}
+
+{ "XF:23ID1-ES{Tst-Det:1}Val-I", "XF:23ID1-ES{Tst-Ax:1}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:2}Val-I", "XF:23ID1-ES{Tst-Ax:2}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:3}Val-I", "XF:23ID1-ES{Tst-Ax:3}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:4}Val-I", "XF:23ID1-ES{Tst-Ax:4}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:5}Val-I", "XF:23ID1-ES{Tst-Ax:5}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:6}Val-I", "XF:23ID1-ES{Tst-Ax:6}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:7}Val-I", "XF:23ID1-ES{Tst-Ax:7}Mtr.RBV", 1.5"}
+{ "XF:23ID1-ES{Tst-Det:8}Val-I", "XF:23ID1-ES{Tst-Ax:8}Mtr.RBV", 1.5"}
+
+}

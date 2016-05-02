@@ -1,0 +1,32 @@
+file ct-eps-plc-va-other.template
+{	
+    pattern { Sys		, Dev		, Comp	, Num	, Indx	}	
+            { XF:23ID1-VA	, "Dif"		, IP	, 1	, 0	}
+            { XF:23ID1-VA	, "Dif"		, IP	, 2	, 1	}
+            { XF:23ID1-VA	, "Dif"		, TMP	, 1	, 2	}
+
+            { XF:23ID1-VA	, "Dif"		, CCG	, 1	, 0	}
+            { XF:23ID1-VA	, "Dif:LoadLck"	, CCG	, 1	, 1	}
+
+            { XF:23ID1-VA	, "Dif"		, TCG	, 1	, 0	}
+            { XF:23ID1-VA	, "Dif:LoadLck"	, TCG	, 1	, 1	}
+            { XF:23ID1-VA	, "Dif:Backing"	, TCG	, 1	, 1	}
+}
+
+file ct-eps-plc-va-gv.template
+{
+    pattern { Sys		, Dev		, Indx   }
+            { XF:23ID1-VA	, "Dif-GV:2"	, 02     }
+            { XF:23ID1-VA	, "Dif-GV:3"	, 03     }
+            { XF:23ID1-VA	, "Dif-GV:4"	, 04     }
+            { XF:23ID1-VA	, "Dif-GV:5"	, 05     }
+            { XF:23ID1-VA	, "Dif-GV:6"	, 06     }
+            { XF:23ID1-VA	, "Dif-Vlv:7"	, 07     }
+            { XF:23ID1-VA	, "Dif-GV:8"	, 08     }
+}
+file ct-eps-plc-act.template
+{
+    pattern { Sys               , Dev           , Indx   }
+            { XF:23ID1-ES       , "Dif-FS"      , 01     }
+            { XF:23ID1-ES       , "Dif-Abs"     , 02     }
+}

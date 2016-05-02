@@ -1,0 +1,18 @@
+syntax: glob
+bin/*
+db/*
+dbd/*
+#*.o
+O.*
+as/*
+.cproject
+.project
+*~
+envPaths
+pmac/*.56K
+pmac/*.LOG
+pmac/*.MAP
+pmac/*.PMA
+pmac/*.TBL
+info_positions.req
+info_settings.req

@@ -1,0 +1,4 @@
+file "dxpSystem_settings.req",          P=$(P)
+file "dxpSaturn_settings.req",          P=$(P)
+file "dxpHighLevel_settings.req",       P=$(P), R=dxp1:
+file "mca_settings.req",                P=$(P), M=mca1
